@@ -31,25 +31,77 @@
     <title>Whats the weather!</title>
   </head>
   <body>
-    <div class="conainer m-5" id="main-body">
-      <div class="contain" id="current-information">
+    <div class="container m-5" id="main-body" style="width: 600px">
+      <div class="container" id="current-information">
         <div class="row">
           <div class="col-lg-6">
-            <h1 class="current-location" id="my-location">current</h1>
-          </div>
-          <div class="col-lg-6">
-            <h1 class="current-time" id="time-stamp">time</h1>
+            <h1 class="current-location" id="my-location">Auckland</h1>
+            <p class="current-time" id="time-stamp">8:21pm</p>
           </div>
         </div>
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
-            <h2 class="current-tempriture" id="location-temprerature">15°</h2>
+          <div class="col-lg-3">
+            <span>
+              <strong class="current-tempriture" id="location-temprerature"
+                >15°</strong
+              >
+              <a href="#" id="celsius-link"> °C</a>|
+              <a href="#" id="fahrenheit-link">°F</a>
+              <p class="currnet-conditions" id="currnet-conditions">Clouds</p>
+            </span>
           </div>
           <div class="col-lg-6">
-            <p class="details" id="day-details">
-              <strong class="discription" id="discription">info</strong>
+            <p>
+              min | <strong>max</strong>: <span id="temp-min">9</span>° |
+              <strong><span id="temp-max">15</span>°</strong> <br />
+              Wind Direction: <span id="wind-direction">SW</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container"></div>
+      <div class="container" id="forcast">
+        <div class="row">
+          <div class="cell" id="day-1">
+            <p>
+              min | <strong>max</strong>: <br />
+              <span id="temp-min">9</span>° |
+              <strong><span id="temp-max">15</span>°</strong> <br />
+              <span class="weather-icon" id="weather-icon">&#x1F324;</span>
+            </p>
+          </div>
+          <div class="cell" id="day-2">
+            <p>
+              min | <strong>max</strong>: <br />
+              <span id="temp-min">9</span>° |
+              <strong><span id="temp-max">15</span>°</strong> <br />
+              <span class="weather-icon" id="weather-icon">&#x1F324;</span>
+            </p>
+          </div>
+          <div class="cell" id="day-3">
+            <p>
+              min | <strong>max</strong>: <br />
+              <span id="temp-min">9</span>° |
+              <strong><span id="temp-max">15</span>°</strong> <br />
+              <span class="weather-icon" id="weather-icon">&#x1F324;</span>
+            </p>
+          </div>
+          <div class="cell" id="day-4">
+            <p>
+              min | <strong>max</strong>: <br />
+              <span id="temp-min">9</span>° |
+              <strong><span id="temp-max">15</span>°</strong> <br />
+              <span class="weather-icon" id="weather-icon">&#x1F324;</span>
+            </p>
+          </div>
+          <div class="cell" id="day-5">
+            <p>
+              min | <strong>max</strong>: <br />
+              <span id="temp-min">9</span>° |
+              <strong><span id="temp-max">15</span>°</strong> <br />
+              <span class="weather-icon" id="weather-icon">&#x1F324;</span>
             </p>
           </div>
         </div>
