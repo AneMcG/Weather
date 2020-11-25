@@ -1,0 +1,24 @@
+#main-body {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fd9f85 100%);
+  font-family: "Castoro", serif;
+  font-size: 18px;
+}
+
+.current-location {
+  font-size: 50px;
+}
+
+.current-time {
+  font-size: 25px;
+}
+
+#forcast {
+  background-color: rgba(253, 252, 252, 0.39);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "item1 item2 item3 item4 item5";
+  text-align: center;
+  padding: 20px 0;
+}
