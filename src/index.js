@@ -18,8 +18,6 @@ timeStamp.innerHTML = (` ${hours}:${minutes} - ${day}, ${date} ${month}`)
 //weather API
 function displayWeather(response) {
     document.querySelector("#my-location").innerHTML = response.data.name;
-    //document.querySelector("#sunrise").innerHTML = response.data.sys.sunrise;
-    //document.querySelector("#sunset").innerHTML = response.data.sys.sunset;
     document.querySelector("#location-temperature").innerHTML = Math.round(response.data.main.temp);
     document.querySelector("#temp-min").innerHTML = Math.round(response.data.main.temp_min);
     document.querySelector("#temp-max").innerHTML = Math.round(response.data.main.temp_max);
@@ -29,7 +27,7 @@ function displayWeather(response) {
     document.querySelector(newFunction())
     response.data.weather[0].description;
 
-    function newFunction() {
+    function newFunction(response) {
         return "#description";
     }
 }
@@ -42,6 +40,9 @@ function currentLocation(position) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(displayWeather);
+
+    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayForecast);
 }
 
 function getCurrentLocation() {
@@ -57,6 +58,9 @@ function search(city) {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
 
     axios.get(url).then(displayWeather);
+
+    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}&units=metric`;
+    axios.get(apiUrl).then(displayForecast);
 }
 
 function searchCity(event) {
