@@ -9,7 +9,7 @@
 }
 
 .updated {
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .grid-container {
@@ -30,4 +30,13 @@
 
 .current-conditions {
   text-transform: capitalize;
+}
+
+.units a {
+  text-decoration: none;
+  color: black;
+}
+
+.units a.active {
+  color: rgb(110, 110, 235);
 }
