@@ -1,35 +1,112 @@
 //Time and Date
-let now = new Date();
+function formatDate(timeStamp) {
+    let now = new Date(timeStamp);
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    let day = days[now.getDay()];
 
-let hours = now.getHours();
+    let date = now.getDate();
 
-let minutes = now.getMinutes();
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-let day = days[now.getDay()];
+    return ` ${formatHours(timeStamp)} - ${day}, ${date}`
+}
 
-let date = now.getDate();
-let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+function formatHours(timeStamp) {
+    let now = new Date(timeStamp);
+    let hours = now.getHours();
+    if (hours < 10) {
+        hours = `0${hours}`;
+    }
 
-let month = months[now.getMonth()]
+    let minutes = now.getMinutes();
+    if (minutes < 10) {
+        minutes = `0${minutes}`;
+    }
+    return `${hours}: ${minutes}`
+}
 
-let timeStamp = document.querySelector("#time-stamp")
-timeStamp.innerHTML = (` ${hours}:${minutes} - ${day}, ${date} ${month}`)
 
 //weather API
 function displayWeather(response) {
     document.querySelector("#my-location").innerHTML = response.data.name;
+    document.querySelector("#time").innerHTML = formatDate(response.data.dt * 1000);
     document.querySelector("#location-temperature").innerHTML = Math.round(response.data.main.temp);
     document.querySelector("#temp-min").innerHTML = Math.round(response.data.main.temp_min);
     document.querySelector("#temp-max").innerHTML = Math.round(response.data.main.temp_max);
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
     document.querySelector("#wind-speed").innerHTML = response.data.wind.speed;
     document.querySelector("#wind-direction").innerHTML = response.data.wind.deg;
-    document.querySelector(newFunction())
-    response.data.weather[0].description;
-
-    function newFunction(response) {
+    document.querySelector(newFunction()).innerHTML = response.data.weather[0].description;
+    function newFunction() {
         return "#description";
     }
+}
+
+function displayForecast(response) {
+    let forecastElement = document.querySelector("#forecast");
+    let forecast = response.data.list[0];
+    console.log(forecast);
+    forecastElement.innerHTML = `
+    <div class="item1" id="day-1">
+        <p>
+            ${formatHours(forecast.dt * 1000)} <br />
+            min | <strong>max</strong>: <br />
+            <span id="temp-min1">${Math.round(forecast.main.temp_min)}</span>° |
+            <strong><span id="temp-max1">${Math.round(forecast.main.temp_max)}</span>°</strong> <br />
+            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
+        </p>
+    </div>
+    `;
+
+    forecast = response.data.list[1];
+    forecastElement.innerHTML += `
+    <div class="item1" id="day-1">
+        <p>
+            ${formatHours(forecast.dt * 1000)} <br />
+            min | <strong>max</strong>: <br />
+            <span id="temp-min1">${Math.round(forecast.main.temp_min)}</span>° |
+            <strong><span id="temp-max1">${Math.round(forecast.main.temp_max)}</span>°</strong> <br />
+            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
+        </p>
+    </div>
+    `;
+
+    forecast = response.data.list[2];
+    forecastElement.innerHTML += `
+    <div class="item1" id="day-1">
+        <p>
+            ${formatHours(forecast.dt * 1000)} <br />
+            min | <strong>max</strong>: <br />
+            <span id="temp-min1">${Math.round(forecast.main.temp_min)}</span>° |
+            <strong><span id="temp-max1">${Math.round(forecast.main.temp_max)}</span>°</strong> <br />
+            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
+        </p>
+    </div>
+    `;
+
+    forecast = response.data.list[3];
+    forecastElement.innerHTML += `
+    <div class="item1" id="day-1">
+        <p>
+            ${formatHours(forecast.dt * 1000)} <br />
+            min | <strong>max</strong>: <br />
+            <span id="temp-min1">${Math.round(forecast.main.temp_min)}</span>° |
+            <strong><span id="temp-max1">${Math.round(forecast.main.temp_max)}</span>°</strong> <br />
+            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
+        </p>
+    </div>
+    `;
+
+    forecast = response.data.list[4];
+    forecastElement.innerHTML += `
+    <div class="item1" id="day-1">
+        <p>
+            ${formatHours(forecast.dt * 1000)} <br />
+            min | <strong>max</strong>: <br />
+            <span id="temp-min1">${Math.round(forecast.main.temp_min)}</span>° |
+            <strong><span id="temp-max1">${Math.round(forecast.main.temp_max)}</span>°</strong> <br />
+            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
+        </p>
+    </div>
+    `;
 }
 
 //current location default 

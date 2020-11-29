@@ -8,17 +8,26 @@
   font-size: 50px;
 }
 
-.current-time {
+.updated {
   font-size: 25px;
-}
-
-#forcast {
-  background-color: rgba(253, 252, 252, 0.39);
 }
 
 .grid-container {
   display: grid;
   grid-template-areas: "item1 item2 item3 item4 item5";
-  text-align: center;
   padding: 20px 0;
+  text-align: center;
+  color: black;
+}
+
+#forecastCard {
+  background-color: rgba(252, 249, 249, 0.335);
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.current-conditions {
+  text-transform: capitalize;
 }

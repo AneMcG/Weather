@@ -36,32 +36,34 @@
         <div class="row">
           <div class="col-lg-auto ml-2">
             <h1 class="current-location mt-2" id="my-location">Auckland</h1>
-            <p>
-              <span class="current-time" id="time-stamp"></span> 
+            <p class="updated">Last updated:
+              <span class="current-time" id="time"></span> 
             </p>
+          </div>
+          <div class="col-lg-auto" id="icon">
           </div>
         </div>
       </div>
       <div class="container text-center">
         <div class="row">
-          <div class="col-lg-3 ml-4">
+          <div class="col-lg-4">
             <span>
               <strong class="current-tempriture" id="location-temperature"
                 >°</strong
               >
               <a href="#" id="celsius-link"> °C</a>|
               <a href="#" id="fahrenheit-link">°F</a>
-              <p class="currnet-conditions" id="description"></p>
+              <p class="current-conditions" id="description"></p>
             </span>
           </div>
-          <div class="col-lg-auto">
+          <div class="col-lg-4">
             <p>
               min | <strong>max</strong>: <span id="temp-min"></span>° |
               <strong><span id="temp-max"></span>°</strong> <br />
               Humidity: <span id="humidity"></span></span>% 
             </p>
           </div>
-          <div class="col-lg-auto ml-5">
+          <div class="col-lg-4">
             <p>
               Wind Speed: <span id="wind-speed"></span>Km/h<br/>
               Wind Duration: <span id="wind-direction"></span>
@@ -72,53 +74,8 @@
       <div class="container text-center" id="button-row">
         <button type="button" class="btn btn-light">Precipitation</button>
       </div>
-      <div class="card m-2 text-center" id="forcast">
-        <div class="grid-container">
-          <div class="item1" id="day-1">
-            <p>
-              Day 1 <br />
-              min | <strong>max</strong>: <br />
-              <span id="temp-min1">9</span>° |
-              <strong><span id="temp-max1">15</span>°</strong> <br />
-              <span class="weather-icon1" id="weather-icon1">&#x1F324;</span>
-            </p>
-          </div>
-          <div class="item2" id="day-2">
-            <p>
-              Day 2 <br />
-              min | <strong>max</strong>: <br />
-              <span id="temp-min">9</span>° |
-              <strong><span id="temp-max">15</span>°</strong> <br />
-              <span class="weather-icon" id="weather-icon">&#x1F324;</span>
-            </p>
-          </div>
-          <div class="item3" id="day-3">
-            <p>
-              Day 3 <br />
-              min | <strong>max</strong>: <br />
-              <span id="temp-min">9</span>° |
-              <strong><span id="temp-max">15</span>°</strong> <br />
-              <span class="weather-icon" id="weather-icon">&#x1F324;</span>
-            </p>
-          </div>
-          <div class="item4" id="day-4">
-            <p>
-              Day 4 <br />
-              min | <strong>max</strong>: <br />
-              <span id="temp-min">9</span>° |
-              <strong><span id="temp-max">15</span>°</strong> <br />
-              <span class="weather-icon" id="weather-icon">&#x1F324;</span>
-            </p>
-          </div>
-          <div class="item5" id="day-5">
-            <p>
-              Day 5 <br />
-              min | <strong>max</strong>: <br />
-              <span id="temp-min">9</span>° |
-              <strong><span id="temp-max">15</span>°</strong> <br />
-              <span class="weather-icon" id="weather-icon">&#x1F324;</span>
-            </p>
-          </div>
+      <div class="card m-2 text-center" id="forecastCard" >
+        <div class="grid-container" id="forecast">
         </div>
       </div>
       <div class="container ml-n3">
