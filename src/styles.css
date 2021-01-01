@@ -12,12 +12,10 @@
   font-size: 18px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-areas: "item1 item2 item3 item4 item5";
-  padding: 20px 0;
-  text-align: center;
-  color: black;
+#forecast {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #forecastCard {
@@ -26,6 +24,12 @@
   border-bottom: none;
   border-left: none;
   border-right: none;
+  margin-bottom: 15px;
+}
+
+#day-card {
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .current-conditions {

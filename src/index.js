@@ -51,7 +51,7 @@ function displayForecast(response) {
     for (let index = 0; index < 5; index++) {
         forecast = response.data.list[index];
         forecastElement.innerHTML += `
-        <div class="item1" id="day-1">
+        <div class="col-xs-auto" id="day-card">
             <p>
                 ${formatHours(forecast.dt * 1000)} <br />
                 min | <strong>max</strong>: <br />
