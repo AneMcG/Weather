@@ -32,6 +32,11 @@
   padding: 0.5rem;
 }
 
+#search-button,
+input {
+  margin-top: 4px;
+}
+
 .current-conditions {
   text-transform: capitalize;
 }
