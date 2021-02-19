@@ -35,7 +35,6 @@ function displayWeather(response) {
     document.querySelector("#temp-max").innerHTML = Math.round(response.data.main.temp_max);
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
     document.querySelector("#wind-speed").innerHTML = response.data.wind.speed;
-    document.querySelector("#wind-direction").innerHTML = response.data.wind.deg;
     document.querySelector(newFunction()).innerHTML = response.data.weather[0].description;
     function newFunction() {
         return "#description";

@@ -1,10 +1,12 @@
 body {
+  background-image: url(/img/cloud-blue-sky.jpg);
+  background-size: cover;
   display: flex;
   flex-direction: unset;
   justify-content: center;
 }
 #main-body {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fd9f85 100%);
+  background-color: rgba(128, 128, 128, 0.568);
   font-family: "Castoro", serif;
   font-size: 18px;
 }
