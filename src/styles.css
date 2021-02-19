@@ -1,14 +1,24 @@
+body {
+  display: flex;
+  flex-direction: unset;
+  justify-content: center;
+}
 #main-body {
   background-image: linear-gradient(120deg, #f6d365 0%, #fd9f85 100%);
   font-family: "Castoro", serif;
   font-size: 18px;
 }
-
+#current-information {
+  display: flex;
+  justify-content: space-evenly;
+}
 .current-location {
+  text-align: center;
   font-size: 50px;
 }
 
 .updated {
+  text-align: center;
   font-size: 18px;
 }
 
@@ -32,12 +42,16 @@
   padding: 0.5rem;
 }
 
+#search-form {
+  display: flex;
+  justify-content: center;
+}
 #search-button,
 input {
   margin-top: 4px;
 }
 
-.current-conditions {
+#description {
   text-transform: capitalize;
 }
 
@@ -48,4 +62,9 @@ input {
 
 .units a.active {
   color: rgb(110, 110, 235);
+}
+
+.blockquote {
+  display: flex;
+  justify-content: center;
 }
