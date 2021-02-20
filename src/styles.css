@@ -1,6 +1,7 @@
 body {
   background-image: url(/img/cloud-blue-sky.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: unset;
   justify-content: center;
